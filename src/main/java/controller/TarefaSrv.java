@@ -41,10 +41,10 @@ public class TarefaSrv extends HttpServlet {
         try {
             String acao = request.getParameter("acao");
 
+            String id = request.getParameter("id");
             String titulo = request.getParameter("titulo");
-            String descricao = request.getParameter("descricao"); 
+            String descricao = request.getParameter("descricao");
             String status = request.getParameter("status");
-            
 
             InterfaceDao dao = DaoFactory.novaTarefaDao();
             Tarefa t = null;
@@ -63,15 +63,37 @@ public class TarefaSrv extends HttpServlet {
                     break;
 
                 case "pre-edicao":
-                    
+                    t = (Tarefa) dao.pesquisarPorId(Integer.parseInt(id));
+                    rd = request.getRequestDispatcher("Formulario.jsp?acao=edicao"
+                            + "&id=" + t.getId()
+                            + "&titulo=" + t.getTitulo()
+                            + "&descricao=" + t.getDescricao()
+                            + "&status=" + t.getStatus());
+                    rd.forward(request, response);
                     break;
 
                 case "edicao":
-                    
+                    t = new Tarefa(titulo, descricao, status);
+                    t.setId(Integer.parseInt(id));
+                    try {
+                        dao.editar(t);
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+                    rd = request.getRequestDispatcher("Listagem.jsp?lista=" + listagem());
+                    rd.forward(request, response);
                     break;
 
                 case "exclusao":
-                    
+                    try {
+                        t = new Tarefa();
+                        t.setId(Integer.parseInt(id));
+                        dao.excluir(t);
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
+                    rd = request.getRequestDispatcher("Listagem.jsp?lista=" + listagem());
+                    rd.forward(request, response);
                     break;
 
                 case "listagem":
