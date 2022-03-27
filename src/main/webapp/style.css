@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 de mar de 2022, 16:38:35
+    Author     : frizz
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@600&family=Roboto:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+h1 {
+    margin: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+}
+ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+.btn-menu {
+  border: none;
+  cursor: pointer;
+  padding: 0px 16px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #000000;
+}
+.btn-menu:hover {
+  border-bottom: 2px solid black;
+}
+.pipe-menu {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+}
+
+.cores {
+    display: inline-block;
+    width: 20px;
+    height: 20px;    
+    border: 1px solid gray;
+    margin-left: 8px;
+}
+#cor-azul { background-color: #DAF5FA}
+#cor-verde { background-color: #F0FFF0}
+#cor-rosa { background-color: #F6D0F6}
+#cor-roxo { background-color: #E6E6FA}
+#cor-amarelo { background-color: #FFFACD}
+#cor-laranja { background-color: #FFEFD5}
+#cor-branco { background-color: #FFFFFF}
+
+#barra-cores {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0px 30px 15px 0px;
+}
+
+
+
