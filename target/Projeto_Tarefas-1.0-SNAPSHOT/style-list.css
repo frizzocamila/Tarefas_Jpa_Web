@@ -27,7 +27,6 @@
     font-size: 15px;
     text-align: center;
     color: #FFFFFF;
-    cursor: pointer;
 }
 .content-descricao {
     font-family: 'Open Sans', sans-serif;
@@ -58,4 +57,19 @@
     font-size: 15px;
     text-align: center;
     color: #FFFFFF;
+}
+#container1{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h3 a{
+    padding: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    text-decoration-line: none;
+    border: 2px solid #4682B4;
 }

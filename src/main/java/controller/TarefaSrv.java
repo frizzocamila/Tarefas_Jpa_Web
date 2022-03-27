@@ -58,7 +58,7 @@ public class TarefaSrv extends HttpServlet {
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
-                    rd = request.getRequestDispatcher("index.html");
+                    rd = request.getRequestDispatcher("Listagem.jsp?lista=" + listagem());
                     rd.forward(request, response);
                     break;
 

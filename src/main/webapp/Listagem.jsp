@@ -17,6 +17,9 @@
         <title>Lista de Tarefas</title>
     </head>
     <body>
+        <div id="container1">
+            <h3><a href="index.html">Tela Principal</a></h3>
+        </div>
         <main id="container">
             <%=listaHTML%>
         </main>
